@@ -9,6 +9,9 @@ body {
   box-sizing: border-box;
   background-color: hsl(210, 46%, 95%);
   font-family: "Barlow Semi Condensed";
+  overflow: hidden;
+  animation: scrollable 0.1ms 3.5s forwards linear;
+
 }
 
 .welcome{
@@ -326,5 +329,15 @@ z-index: 10;
 
   100% {
     transform: perspective(300px) translateZ(0px);
+  }
+}
+
+@keyframes scrollable {
+  0% {
+    overflow: none;
+  }
+
+  100% {
+    overflow:scroll;
   }
 }
